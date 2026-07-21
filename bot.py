@@ -178,7 +178,7 @@ async def clear(ctx: commands.Context):
     await ctx.reply(f"Cleared **{removed}** saved screenshot(s).", mention_author=False)
 
 @bot.command(name="courtvision")
-@bot.command(name="help")
+
 async def help_command(ctx: commands.Context):
     await ctx.send(
         "**🏀 Court Vision Commands**\n"
