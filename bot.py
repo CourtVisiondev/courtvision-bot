@@ -177,7 +177,7 @@ async def clear(ctx: commands.Context):
     sessions[ctx.channel.id].clear()
     await ctx.reply(f"Cleared **{removed}** saved screenshot(s).", mention_author=False)
 
-@bot.command(name="courtvision")
+@bot.command(name="help", aliases=["courtvision"])
 
 async def help_command(ctx: commands.Context):
     await ctx.send(
