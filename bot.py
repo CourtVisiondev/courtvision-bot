@@ -91,6 +91,7 @@ async def analyze_images(images: List[dict]) -> str:
     contents = [types.Part.from_text(text=f"{SYSTEM_PROMPT}\n\nAnalyze these {len(images)} NBA 2K scoreboard screenshot(s) as one complete session.")]
     for image in images:
         contents.append(types.Part.from_bytes(data=image["data"], mime_type=image["mime_type"]))
+print(f"GEMINI_MODEL = {repr(GEMINI_MODEL)}")
     response = await client.aio.models.generate_content(
         model=GEMINI_MODEL,
         contents=contents,
